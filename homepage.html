@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 물건 목록</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .item button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>내 물건 목록</h1>
+
+    <div class="item">
+        <div>
+            <img src="물건이미지1.jpg" alt="물건1">
+            <p>물건 이름 1</p>
+            <p>수량: 3</p>
+        </div>
+        <button onclick="reserveItem('물건 이름 1')">예약하기</button>
+    </div>
+
+    <div class="item">
+        <div>
+            <img src="물건이미지2.jpg" alt="물건2">
+            <p>물건 이름 2</p>
+            <p>수량: 5</p>
+        </div>
+        <button onclick="reserveItem('물건 이름 2')">예약하기</button>
+    </div>
+
+    <!-- 더 많은 물건을 추가할 수 있습니다 -->
+
+    <script>
+        function reserveItem(itemName) {
+            let nickname = prompt(itemName + "을(를) 예약하려면 닉네임을 입력하세요:");
+            if (nickname) {
+                alert(nickname + "님이 " + itemName + "을(를) 예약했습니다.");
+                // 이곳에 서버로 예약 정보를 보내는 코드를 추가할 수 있습니다.
+                console.log(nickname + "님이 " + itemName + "을(를) 예약했습니다.");
+            }
+        }
+    </script>
+
+</body>
+</html>
